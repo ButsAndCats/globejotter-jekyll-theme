@@ -1,0 +1,55 @@
+/* Header ====================================================================*/
+
+.theme-header {
+  padding: $gutter 0 0 0;
+  position: relative;
+  .template-index & {
+    margin-bottom: 0;
+  }
+  .row { // TO DO - replace with new bottom-margin class
+    margin-bottom: 0;
+  }
+  .logo {
+    margin: 0;
+    a, span {
+      display: inline-block;
+    }
+  }
+  .triangle {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+      .fill {
+        fill: $colorBrand;
+      }
+    }
+  }
+  .tagline {
+    margin-top: $gutter*3;
+    margin-bottom: $gutter*5;
+  }
+  #particle-header-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:-1;
+  }
+  #particle-header-fg {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

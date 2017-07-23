@@ -1,0 +1,140 @@
+// Helpers
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.wide {
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+.gutter {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+.double-gutter {
+  padding-top: $gutter*2;
+  padding-bottom: $gutter*2;
+}
+.inline {
+  list-style: none;
+  display: inline-block;
+  li {
+    display: inline-block;
+  }
+}
+.relative {
+  position: relative;
+}
+.clearfix {
+  @include clearfix();
+}
+//hr
+.underline {
+  width: 70px;
+  border: 3px solid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $headingFontMargin;
+  border-radius: 5px;
+}
+// Colors
+@mixin palette( $bgName, $fgName, $bgColor, $fgColor ) {
+  &.#{$bgName}-#{$fgName} {
+    background-color: $bgColor;
+    color: $fgColor;
+    a, h1, h2, h3, h4, h5, h6, p {
+      color: $fgColor;
+    }
+    .icon {
+      .fill {
+        fill: $fgColor;
+      }
+      .stroke {
+        stroke: $fgColor;
+      }
+    }
+    input, textarea {
+      border-color: $fgColor;
+    }
+    input[type="checkbox"]:checked {
+      background-color: $fgColor;
+    }
+    .button {
+      background-color: $fgColor;
+      border-color: $fgColor;
+      color: $bgColor;
+    }
+    hr {
+      border-color: $fgColor;
+    }
+  }
+}
+
+$colors: ("white": $colorWhite, "lightGray": $colorLightGray, "gray": $colorGray, "darkGray": $colorDarkGray, "pink": $colorPink, "purple": $colorPurple, "blue": $colorBlue, "cyan": $colorCyan, "green": $colorGreen, "darkGreen": darken($colorGreen, 14%), "yellow": $colorYellow, "orange": $colorOrange, "red": $colorRed, brand: $colorBrand, text: $colorText, foreground: $colorForeground, background: $colorBackground, highlight: $colorHighlight, alternate: $colorAlternate );
+
+@each $name, $color in $colors {
+  .font-#{$name} { color: $color !important;  }
+  .bg-#{$name} { background-color: $color !important; }
+  .border-#{$name} { border-color: $color !important; }
+  .fill-#{$name} {
+    .fill {
+      fill: $color !important;
+    }
+  }
+}
+
+.palette {
+  @include palette( brand, foreground, $colorBrand, $colorForeground );
+  @include palette( brand, background, $colorBrand, $colorBackground );
+  @include palette( brand, text, $colorBrand, $colorText );
+  @include palette( brand, highlight, $colorBrand, $colorHighlight );
+  @include palette( brand, alternate, $colorBrand, $colorAlternate );
+  @include palette( foreground, brand, $colorForeground, $colorBrand);
+  @include palette( foreground, background, $colorForeground, $colorBackground );
+  @include palette( foreground, text, $colorForeground, $colorText );
+  @include palette( foreground, highlight, $colorForeground, $colorHighlight );
+  @include palette( foreground, alternate, $colorForeground, $colorAlternate );
+  @include palette( background, background, $colorBackground, $colorBackground );
+  @include palette( background, brand, $colorBackground, $colorBrand );
+  @include palette( background, foreground, $colorBackground, $colorForeground );
+  @include palette( background, text, $colorBackground, $colorText );
+  @include palette( background, highlight, $colorBackground, $colorHighlight );
+  @include palette( background, alternate, $colorBackground, $colorAlternate );
+  @include palette( text, text, $colorText, $colorText );
+  @include palette( text, brand, $colorText, $colorBrand );
+  @include palette( text, foreground, $colorText, $colorForeground );
+  @include palette( text, background, $colorText, $colorBackground );
+  @include palette( text, highlight, $colorText, $colorHighlight );
+  @include palette( text, alternate, $colorText, $colorAlternate );
+  @include palette( highlight, highlight, $colorHighlight, $colorHighlight );
+  @include palette( highlight, brand, $colorHighlight, $colorBrand );
+  @include palette( highlight, foreground, $colorHighlight, $colorForeground );
+  @include palette( highlight, background, $colorHighlight, $colorBackground );
+  @include palette( highlight, text, $colorHighlight, $colorText );
+  @include palette( highlight, alternate, $colorHighlight, $colorAlternate );
+  @include palette( alternate, alternate, $colorAlternate, $colorAlternate );
+  @include palette( alternate, brand, $colorAlternate, $colorBrand );
+  @include palette( alternate, foreground, $colorAlternate, $colorForeground );
+  @include palette( alternate, background, $colorAlternate, $colorBackground );
+  @include palette( alternate, text, $colorAlternate, $colorText);
+  @include palette( alternate, highlight, $colorAlternate, $colorHighlight );
+  @include palette( none, brand, transparent, $colorBrand );
+  @include palette( none, foreground, transparent, $colorForeground );
+  @include palette( none, background, transparent, $colorBackground );
+  @include palette( none, alternate, transparent, $colorAlternate );
+  @include palette( none, text, transparent, $colorText );
+  @include palette( none, highlight, transparent, $colorHighlight );
+}

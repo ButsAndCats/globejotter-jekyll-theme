@@ -1,0 +1,38 @@
+/* Footer ====================================================================*/
+
+.theme-footer {
+  height: 270px;
+  position: relative;
+  .content {
+    z-index: 5;
+    position: absolute;
+    left: $gutter;
+    top: 50%;
+    li {
+      padding-right: $gutter/3;
+    }
+    svg {
+      .fill {
+        fill: $colorWhite;
+      }
+    }
+    a {
+      color: $colorWhite;
+    }
+  }
+  .triangle {
+    padding:0;
+    margin:0;
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    bottom: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+      .fill {
+        fill: $colorDarkGray;
+      }
+    }
+  }
+}

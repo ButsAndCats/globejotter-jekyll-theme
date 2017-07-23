@@ -1,0 +1,31 @@
+.admin {
+  height: 100%;
+}
+
+.service-anchors {
+  position: relative;
+  overflow: hidden;
+  .service {
+    background-color: darken($colorGreen, 12%);
+    // border-radius: 8px;
+    transition: ease all 0.2s;
+    margin-bottom: -80px;
+    &:hover {
+      background-color: darken($colorGreen, 14%);
+      transform: translateY(-35px) scale(1.05);
+    }
+  }
+}
+
+.triangle {
+  pointer-events: none;
+  padding:0;
+  margin:0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

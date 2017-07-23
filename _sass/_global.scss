@@ -1,0 +1,21 @@
+
+/* Global ====================================================================*/
+
+html {
+  height: 100%
+}
+
+body {
+  height: 100%;
+  color: $colorText;
+  background-color: $colorBackground;
+  font: 16px/21px $bodyFontStack, sans-serif;
+  font-weight: $bodyFontWeight;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}

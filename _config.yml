@@ -1,0 +1,26 @@
+# META ====================================
+title: Globejotter | Mapbox Jekyll Theme
+name: Globejotter
+email: me@georgebutter.com
+url: globejotter.georgebutter.com
+github: https://github.com/butsandcats/
+description: A Mapbox theme for Jekyll
+# Design ==================================
+# gutter: 40px
+border_radius: 8px
+border_weight: 0px
+# border_style: dashed
+link_style: none
+# base_font_size: 18px
+color_brand: '#222' #colors can be sas variables or hex codes
+color_text: '#222'
+color_foreground: '$colorWhite'
+color_background: '$colorLightGray'
+# color_highlight: '$colorBlue'
+# color_alternate: '$colorYellow'
+date_format: '%A, %d %B, %Y'
+body_font_stack: "Helvetica, Arial, sans-serif"
+body_font_weight: 400
+# heading_font_weight: 600
+heading_font_stack: "Helvetica, Arial, sans-serif"
+# heading_font_transform: uppercase

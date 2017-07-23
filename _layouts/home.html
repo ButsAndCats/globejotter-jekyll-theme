@@ -1,0 +1,21 @@
+{% include head.html %}
+<body>
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+
+  <div id="map"><header class="theme-header bg-white font-darkGray" role="banner">Globejotter</header></div>
+  <script>
+    // Set the access token
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYnV0c2FuZGNhdHMiLCJhIjoiY2o1Zmc5Y3lmMGZ1aDM2bzF4d2lidmF6MyJ9.GmtVD4t2w4idaOMOqpzMGQ';
+    // Build map
+    var map = L.mapbox.map('map')
+    // set view to latest post
+    .setView([40, -74.50], 9);
+    // Add custom style
+    var styleLayer = L.mapbox.styleLayer('mapbox://styles/butsandcats/cj5eqa2eh1m9j2rplr99niwwl')
+    .addTo(map);
+
+  </script>
+</body>
